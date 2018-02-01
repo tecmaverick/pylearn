@@ -35,3 +35,44 @@ print "# elements in list username is:{}".format(len(username))
 
 for chr in username:
 	print chr
+
+#Delete entry from list
+print "deleting first element '0' from data"
+data = [1,2,3,4,5]
+del data[0]
+print (data)
+
+#delete items from a list by element value rather by index
+data = ["one","two","three","four","four","five"]
+print "deleting element with the value 'two' and 'four' from list {}".format(data)
+data.remove("two")
+data.remove("four")
+print "after deleting item value two from list {}".format(data)
+
+
+
+data = [1,2,3,4,5]
+
+#join list
+lista = [1,2,3]
+listb = [4,5,6]
+listc = lista + listb
+print "joining two lists lista {} and listb {} = listc {}".format(lista, listb,listc)
+
+#sort list
+data = [25,4,71,11,3,8,2,6,99,44,23,54,75,1,48]
+print "unsorted list {}".format(data)
+data.sort()
+print "sorted list {}".format(data)
+
+#merge unique items from two lists
+a = [1,2,3,4,5]
+b = [3,4,5,6,7,8,9,10]
+c = list(set(a + b)) 
+print "merging two lists a = {} b = {} for generating unique items c = {}".format(a,b,c)
+
+#get item from list by index
+a = ["one","two","three"]
+print "Accessing seond eleent in a list  by index: a[1] = {}".format(a[1])
+
+
