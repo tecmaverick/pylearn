@@ -1,0 +1,3 @@
+data = b"somevalue test"
+d = data.split(" ")
+print d
