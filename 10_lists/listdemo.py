@@ -75,4 +75,7 @@ print "merging two lists a = {} b = {} for generating unique items c = {}".forma
 a = ["one","two","three"]
 print "Accessing seond eleent in a list  by index: a[1] = {}".format(a[1])
 
+#Search items in list
+some_data = [1,"help",34,"name",90,"val"]
+print "is 90 in some_data {}: {}".format(some_data,90 in some_data)
 
