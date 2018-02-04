@@ -1,3 +1,3 @@
 ## PyLearn
 
-Welcome, PyLearn the repository of all the scripts I have authored as part of learning Python.
+Welcome to my PyLearn repository, here you will find all of the scripts I have authored as part of mastering Python, right from basics.
