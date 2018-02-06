@@ -71,6 +71,12 @@ b = [3,4,5,6,7,8,9,10]
 c = list(set(a + b)) 
 print "merging two lists a = {} b = {} for generating unique items c = {}".format(a,b,c)
 
+#add two lists
+a = ["alpha","beta"]
+b = ["alpha","gamma","tango"]
+c = a + b 
+print "list  a + list b = {}".format(c)
+
 #get item from list by index
 a = ["one","two","three"]
 print "Accessing seond eleent in a list  by index: a[1] = {}".format(a[1])
@@ -79,3 +85,8 @@ print "Accessing seond eleent in a list  by index: a[1] = {}".format(a[1])
 some_data = [1,"help",34,"name",90,"val"]
 print "is 90 in some_data {}: {}".format(some_data,90 in some_data)
 
+#Get element from the last
+k = [0,1,2,3,4,5,6,7,8,9,10]
+print "Last item in the list is k[-1] :{}".format(k[-1])
+print "Fifth element from the last k[-5] :{}".format(k[-5])
+print "Fifth element from the last k[-5] :{}".format(k[0:5])
