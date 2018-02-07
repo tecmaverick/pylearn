@@ -87,6 +87,11 @@ print "is 90 in some_data {}: {}".format(some_data,90 in some_data)
 
 #Get element from the last
 k = [0,1,2,3,4,5,6,7,8,9,10]
+print "list k: {}".format(k)
 print "Last item in the list is k[-1] :{}".format(k[-1])
 print "Fifth element from the last k[-5] :{}".format(k[-5])
-print "Fifth element from the last k[-5] :{}".format(k[0:5])
+print "Get items from second element to fifth element k[2:5] :{}".format(k[2:5])
+print "Get items from second element to fifth element from last  k[2:-5] :{}".format(k[2:-5])
+print "Get items from second element to last k[2:] :{}".format(k[2:])
+print "Get items from very first element to third k[:3] :{}".format(k[:3])
+print "Get all items from list k[:] :{}".format(k[:])
