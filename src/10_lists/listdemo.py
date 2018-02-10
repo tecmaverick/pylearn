@@ -101,6 +101,7 @@ print "Get all items from list k[:] :{}".format(k[:])
 dictData = {"name":"abraham"}
 listdata = [1,2,3]
 list1 = ["Alpha",dictData, listdata]
+# this is the widely used method by py devs for copying list. This however doesn't work with generators
 list2 = list1[:]
 print "list1 is list2 {}".format(list1 is list2) #false because both ids are different
 print "list1 == list2 {}".format(list1 == list2) #true because both lists refer to the same values
@@ -112,8 +113,10 @@ print "here the change is reflected in both lists"
 print "list1 values:{} \nlist2 values:{}".format(list1, list2)
 
 print "different ways to copy lists. Note all these does a shallow copy"
-newlist = list1.copy()
+#newlist = list1.copy()
 newlist = list1[:]
-newlist = list(list1) #this is the preferred method, as the ctor allows accpeting any datastruct capable over iterable series of source and not just lists
 
+#this is the preferred method, as the ctor allows accpeting any datastruct capable over iterable series of source and not just lists.
+#and it works with generators
+newlist = list(list1)
 
