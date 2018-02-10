@@ -87,6 +87,33 @@ print "is 90 in some_data {}: {}".format(some_data,90 in some_data)
 
 #Get element from the last
 k = [0,1,2,3,4,5,6,7,8,9,10]
+print "list k: {}".format(k)
 print "Last item in the list is k[-1] :{}".format(k[-1])
 print "Fifth element from the last k[-5] :{}".format(k[-5])
-print "Fifth element from the last k[-5] :{}".format(k[0:5])
+print "Get items from second element to fifth element k[2:5] :{}".format(k[2:5])
+print "Get items from second element to fifth element from last  k[2:-5] :{}".format(k[2:-5])
+print "Get items from second element to last k[2:] :{}".format(k[2:])
+print "Get items from very first element to third k[:3] :{}".format(k[:3])
+print "Get all items from list k[:] :{}".format(k[:])
+
+#Copy lists, when a list is copied it does a shallow copy, which means the objects within both the list 
+#refernce the same variables
+dictData = {"name":"abraham"}
+listdata = [1,2,3]
+list1 = ["Alpha",dictData, listdata]
+list2 = list1[:]
+print "list1 is list2 {}".format(list1 is list2) #false because both ids are different
+print "list1 == list2 {}".format(list1 == list2) #true because both lists refer to the same values
+
+print "modifying list2 1st element from 'abraham' to 'beta'"
+list2[1]["name"] = "beta"
+
+print "here the change is reflected in both lists"
+print "list1 values:{} \nlist2 values:{}".format(list1, list2)
+
+print "different ways to copy lists. Note all these does a shallow copy"
+newlist = list1.copy()
+newlist = list1[:]
+newlist = list(list1) #this is the preferred method, as the ctor allows accpeting any datastruct capable over iterable series of source and not just lists
+
+
