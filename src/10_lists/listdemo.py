@@ -59,17 +59,63 @@ listb = [4,5,6]
 listc = lista + listb
 print "joining two lists lista {} and listb {} = listc {}".format(lista, listb,listc)
 
+#extend list
+lista = [1,2,3]
+listb = [4,5,6]
+listb += lista
+print "Contact list with listb += lista: {}".format(listb)
+
+#extend() method can be used on any datatype which supports iteration
+listb.extend([90,91,02])
+print "Extended list:{} ".format(listb)
+
 #sort list
 data = [25,4,71,11,3,8,2,6,99,44,23,54,75,1,48]
 print "unsorted list {}".format(data)
 data.sort()
 print "sorted list {}".format(data)
 
+#reverse sort using sort method
+data = [25,4,71,11,3,8,2,6,99,44,23,54,75,1,48]
+print "unsorted list {}".format(data)
+data.sort(reverse=True)
+print "decensing sort:{}".format(data)
+
+#reverse sort
+print "unsorted list {}".format(data)
+data.reverse()
+print "reversed list {}".format(data)
+
+#sort by length
+data = ["snozeeeeee","the","I","owner","countries"]
+print "list {}".format(data)
+data.sort(key=len)
+print "sort by word length list {}".format(data)
+print "-" * 30
+
+#sort list using the sorted function, works for any type which is iteratable
+#The sorted() function doest modify the original obj, instead it returns a new ref
+data = [25,4,71,11,3,8,2,6,99,44,23,54,75,1,48]
+print "unsorted list {}".format(data)
+data1 = sorted(data)
+print "sorted list using sorted() function {}".format(data1)
+print "-" * 30
+
+#reverse sort using sort method
+data = [25,4,71,11,3,8,2,6,99,44,23,54,75,1,48]
+print "unsorted list {}".format(data)
+data1 = reversed(data)
+#note the list() ctor is used to iterate through the result
+print "reversed list using reversed function :{}".format(list(data1))
+print "-" * 30
+
 #merge unique items from two lists
 a = [1,2,3,4,5]
 b = [3,4,5,6,7,8,9,10]
 c = list(set(a + b)) 
 print "merging two lists a = {} b = {} for generating unique items c = {}".format(a,b,c)
+print "-" * 30
+
 
 #add two lists
 a = ["alpha","beta"]
@@ -120,3 +166,19 @@ newlist = list1[:]
 #and it works with generators
 newlist = list(list1)
 
+#remove element from list using del 
+d = "the quick brown fox jumped over the lazy dag".split(" ")
+print d
+#remove the element "fox"
+del d[d.index("fox")]
+print "Removed element 'fox' via del command. result: {}".format(d)
+
+#remove item from list using the remove method
+d.remove("the")
+print "Removed element 'the' via remove() command. result: {}".format(d)
+
+#insert new element at a specific index
+newelm = "tiger"
+#insrt after tiger i.e. +1 from the position where 'brown' elm is located
+d.insert(d.index("brown")+1,newelm)
+print "inserting elm 'tiger' after brown. Result:{}".format(d)
