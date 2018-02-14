@@ -45,3 +45,7 @@ print "Pi to 2 decimal places {:,}".format(1000000*29)
 #format by comma and decimal places
 print "Pi to 2 decimal places {:,.2f}".format(1000000*29)
 
+#inplace formatting, only works with Python 3
+#first_name = "John"
+#last_name = "Rob"
+#print (f"Hello {first_name}, {last_name}")

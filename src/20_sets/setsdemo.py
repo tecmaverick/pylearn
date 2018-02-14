@@ -47,8 +47,30 @@ andrew_visited_places = {"usa","china","uk","india","australia","france","spain"
 philip_visited_places = {"canada","china","india","australia","greece","spain","brazil","israel"}
 john_visited_places = {"mexico","japan","malaysia","india","singapore","srilanka","spain","brazil"}
 
+#union shows elements in either or both sets. this is a commutative operation which means even if the sets are swapped will return same results
 print "Places visited by John and Andrew:{}".format(john_visited_places.union(andrew_visited_places))
+
+#intersections shows elements in both sets
 print "Places visited in common by John and Andrew:{}".format(john_visited_places.intersection(andrew_visited_places))
+
+#difference gets all elements which are in the first set but not in the second. This is non-commutative
 print "Places visited only by John and not by Andrew:{}".format(john_visited_places.difference(andrew_visited_places))
-print "Places visited only by John and not by Andrew:{}".format(john_visited_places.difference(andrew_visited_places))
+
+#symmetric_difference returns elements in both sets but not in both
+print "Places visited only by John and not by Andrew:{}".format(john_visited_places.symmetric_difference(andrew_visited_places))
  
+all_color = {"red","green","white","black","maroon","blue","yellow"}
+primary_color = {"green","red","blue"}
+
+#Is primary_color subset of all_color
+print "Is primary_color {} subset of all_color{}: {} ".format(primary_color,all_color,primary_color.issubset(all_color))
+
+#is superset
+print "Is all_color {}  superset of primary_color {}: {} ".format(all_color, primary_color, all_color.issuperset(primary_color))
+
+#is disjoint set means both set contains non-comon elements 
+color_i_like = {"grey","pruple","magenta"}
+print "Is color_i_like {} disjoint of primary_color {}: {} ".format(color_i_like, primary_color, color_i_like.isdisjoint(primary_color))
+
+
+
