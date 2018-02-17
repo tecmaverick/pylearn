@@ -1,4 +1,5 @@
 :syntax on
 :set number
+:set ruler
 filetype on
 autocmd FileType python nnoremap <buffer> <F9> :w<CR>:exec '!clear; python' shellescape(@%, 1)<cr>
