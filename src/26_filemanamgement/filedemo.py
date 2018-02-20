@@ -24,7 +24,9 @@ f.close()
 #reading file line by line for loop demo
 f = open("data.txt",mode="rt")
 for line in f.readlines():
-	print line
+	#print line
+	#this eliminates the line feed by print function + the line feed char in each line
+	sys.stdout.write(line)
 f.close()
 
 #reading file line by line while loop demo
@@ -37,3 +39,17 @@ while True:
 f.close()
 
 #Seek demo
+f = open("data.txt",mode="rt")
+#start reading text from file pointer 5
+f.seek(5)
+print f.readline()
+f.close()
+
+
+#Append text to file
+f = open("data.txt",mode="at")
+f.writelines("adding new line")
+f.close()
+
+
+
