@@ -51,5 +51,9 @@ f = open("data.txt",mode="at")
 f.writelines("adding new line")
 f.close()
 
-
+#using with statements with file operations which auto closes the file handle
+#With statement is a sugar coated syntax for the tr except finally block
+print "With statement demo"
+with open("data.txt", mode="rt") as f:
+	print f.read()
 
