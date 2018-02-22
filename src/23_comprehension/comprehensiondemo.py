@@ -51,3 +51,10 @@ def is_even(x):
 
 x= [x for x in range(10) if is_even(x)] 
 print x
+
+#Generator comprehension, replacing square brackets with parathensis
+#will convert list comprehension to generator comprehnesion
+x = [1,2,3,4,5]
+z = (z*z for z in x)
+print z
+
