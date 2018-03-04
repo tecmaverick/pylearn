@@ -1,0 +1,1 @@
+print ("Compressor module init")
