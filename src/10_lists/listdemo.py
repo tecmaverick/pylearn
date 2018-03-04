@@ -182,3 +182,19 @@ newelm = "tiger"
 #insrt after tiger i.e. +1 from the position where 'brown' elm is located
 d.insert(d.index("brown")+1,newelm)
 print "inserting elm 'tiger' after brown. Result:{}".format(d)
+
+
+#extend vs append
+#extend method adds items to the list
+a = [1,2]
+b = [3,4]
+a.extend(b) 
+print(b) #outputs [1,2,3,4]
+
+#append method inserts given object in the append method argument to the end of the list 
+a = [1,2]
+b = [3,4]
+a.append(b) 
+print(b) #outputs [1,2,[3,4]]
+
+
