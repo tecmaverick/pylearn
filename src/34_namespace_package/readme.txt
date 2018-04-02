@@ -6,6 +6,7 @@ How python finds namespace packages
 1. Python scans each of the entries in sys.path
 2. if a matching folder name is found for the packagename with __init__.py, then a normal package is loaded
 3. if a module is found eg. foo.py the name python is looking for is found, then this is loaded
+4. otherwise all matching directories in sys.path are considered part of the namespace package
 
 If two namespace packages contains the same module name, then the last import statement overrides the first one
 Example:
