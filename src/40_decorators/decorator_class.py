@@ -1,5 +1,7 @@
 #class as decotrators
 
+#the class instance must be callable, i.e. the class should implement
+# __call__ method
 class invoke_counter():
 	def __init__(self,func):
 		self.counter = 0
