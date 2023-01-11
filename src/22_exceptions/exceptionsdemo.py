@@ -17,7 +17,7 @@ def add_num(fno, sno):
 	#catch all other exceptions. Exception info will
 	except:
 		print "Unknown error occured"
-		raise
+		raise Exception('Invalid input')
 	finally:
 		print "Finally block is executed irrespetive of the error"
 	return val
