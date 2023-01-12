@@ -72,5 +72,8 @@ print "Is all_color {}  superset of primary_color {}: {} ".format(all_color, pri
 color_i_like = {"grey","pruple","magenta"}
 print "Is color_i_like {} disjoint of primary_color {}: {} ".format(color_i_like, primary_color, color_i_like.isdisjoint(primary_color))
 
-
+#Convert Set to list
+colors_set = {"white","green","red","blue"}
+colors_list = list(colors)
+print(colors_list)
 
