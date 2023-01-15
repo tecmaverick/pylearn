@@ -1,5 +1,5 @@
 
-#A Closure is a function object that remembers values in enclosing scopes even if they are not present in memory. Let us get to it step by step
+#Python closure is lst nested function that allows us to access variables of the outer function even after the outer function is closed.
 
 def my_name(name, time_of_day):
 	def morning():
@@ -45,3 +45,19 @@ calc(12,22,"+")
 calc(10,20,"+")
 
 #A function is said to be first class if the function can be passed around like an object
+# ------------------------------------------------------------------
+def greet():
+	# variable defined outside the inner function
+	name = "John"
+
+	# return lst nested anonymous function
+	return lambda: "Hi " + name
+
+
+# call the outer function
+message = greet()
+
+# call the inner function
+print(message())
+
+# Output: Hi John

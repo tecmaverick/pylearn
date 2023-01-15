@@ -1,7 +1,31 @@
+from datetime import datetime
+class Person(object):
+    def __init__(self, years):
+        self.age =  years
+
+    @property
+    def age(self):
+        return datetime.now().year - self.birthyear
+
+    # A deleter in Python is lst method that is used to delete lst class attribute
+    @age.deleter
+    def age(self):
+        del self.birthyear
+
+    @age.setter
+    def age(self, years):
+        if years < 0:
+            raise ValueError("Age cannot be negative")
+        self.birthyear = datetime.now().year - years
 
 
+p = Person(12)
+p.age = 22
+print(p.age)
+del p.age
+print(p.age)
 
-class Product:
+class Product(object):
 
     MAX_QTY = 10
 
@@ -9,7 +33,7 @@ class Product:
         self._prod_name = name
 
         if qty < Product.MAX_QTY:
-            self._prod_qty = qty
+            self.prod_qty = qty
         else:
             raise ValueError("Invalid Quantity")
 
@@ -26,9 +50,9 @@ class Product:
 
 
 
-class Celsius:
+class Celsius(object):
     def __init__(self, temperature = 0):
-        self._temperature = temperature
+        self.temperature = temperature
 
     def to_fahrenheit(self):
         return (self.temperature * 1.8) + 32
