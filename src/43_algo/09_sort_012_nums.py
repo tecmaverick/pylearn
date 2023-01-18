@@ -1,24 +1,3 @@
-# def sort012( arr, n):
-#     arr_index = 1
-#     sorted_start_index = 0
-#
-#     while sorted_start_index < n:
-#         if arr[sorted_start_index] > arr[arr_index]:
-#             arr[sorted_start_index], arr[arr_index] = arr[arr_index], arr[sorted_start_index]
-#
-#         arr_index += 1
-#
-#         if arr_index == n:
-#             sorted_start_index += 1
-#             arr_index = sorted_start_index + 1
-#
-#         if sorted_start_index >= n-1:
-#             break
-#
-#
-#
-#     return arr
-
 # Function to sort the array of 0s, 1s and 2s
 
 def sort012(arr, n):
