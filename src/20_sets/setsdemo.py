@@ -10,8 +10,23 @@ print x
 myset = set()
 print type(myset)
 
+# add item to set
+myset.add(1)
+
 #init a set from list
 myset = set([11,23,34,45,234,2,11,324,2,23,34])
+print myset
+
+#init a set from string
+myset = set('ABC')
+print myset
+
+#init a set from tuple
+myset = set((1,2,3))
+print myset
+
+#init a set from dict. OUtputs only the keys and NOT values
+myset = set({"a":1,"b":2})
 print myset
 
 #iterating thru set. Here the output is not ordered as items inserted to the list
