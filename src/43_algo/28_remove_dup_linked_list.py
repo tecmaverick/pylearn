@@ -22,8 +22,8 @@ def removeDuplicates1(head):
 
     while curr_node is not None:
         if curr_node.data in dict:
-            while curr_node is not None and curr_node.data in dict:
-                curr_node = curr_node.next
+            # while curr_node is not None and curr_node.data in dict:
+            curr_node = curr_node.next
 
             prev_node.next = curr_node
         else:
@@ -51,8 +51,8 @@ def removeDuplicates0(head):
     return head
 
 
-data = "2 2 3 7 10 13 18 18 20 20 27 28 30 32 33 35 40 40 41 42 45 53 54 57 57 61 66 66 68 68 69 71 72 76 77 79 81 82 84 87 87 87 90 93 95 96 98 98 98"
-data = "2 2 2 2"
+data = "2 2 3 7 10 13 18 18 20 20 27 28 30 32 33 35 40 40 40 40 41 42 45 53 54 57 57 61 66 66 68 68 69 71 40 40 77 79 81 82 84 87 87 87 90 93 95 96 98 98 98"
+# data = "2 2 2 2"
 
 
 def populateNode(data):
@@ -77,7 +77,8 @@ def populateNode(data):
 # n4 = Node(5);n3.next = n4
 
 n = populateNode(data)
-res = removeDuplicates0(n)
+# res = removeDuplicates0(n)
+res = removeDuplicates1(n)
 while res is not None:
     print(res.data)
     res = res.next

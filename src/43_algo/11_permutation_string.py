@@ -27,7 +27,7 @@
 # *******
 # Python native permutations
 from itertools import permutations
-print(list(permutations("ABCD",3)))
+print(list(permutations(["A","B","C","D"],3)))
 # 4 X 3 X 2 = 24 permutations
 
 # from itertools import combinations
