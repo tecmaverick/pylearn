@@ -15,11 +15,9 @@ def find_num1(n, lst):
             if sum_val == n:
                 found = True
                 break
-
             elif sum_val > n:
                 result.pop()
                 sum_val -= inner
-
         if found:
             break
 
